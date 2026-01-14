@@ -1,0 +1,8 @@
+node_modules/
+*.db
+.env
+.env.local
+.DS_Store
+*.log
+debug-votes.js
+railway.json

@@ -1,0 +1,29 @@
+{
+    "name": "office-awards-voting-bot",
+    "version": "1.0.0",
+    "description": "Office awards voting system with admin panel",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node server.js",
+        "bot": "node bot.js",
+        "start:all": "node start-all.js"
+    },
+    "keywords": [
+        "voting",
+        "awards",
+        "office"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "sqlite3": "^5.1.7",
+        "cors": "^2.8.5",
+        "telegraf": "^4.15.0",
+        "dotenv": "^16.3.1"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

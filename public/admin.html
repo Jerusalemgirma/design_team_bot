@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Office Awards 2026</title>
+    <meta name="description" content="Admin panel for Office Awards voting results">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Admin Login -->
+        <section class="admin-login-section" id="adminLoginSection">
+            <div class="card admin-login-card">
+                <h1>🔐 Admin Access</h1>
+                <p class="card-subtitle">Enter password to view results</p>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" name="adminPassword"
+                            placeholder="Enter admin password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Login
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+                <a href="/" class="back-link">← Back to Voting</a>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard -->
+        <section class="admin-dashboard hidden" id="adminDashboard">
+            <!-- Header -->
+            <header class="header admin-header">
+                <div class="header-content">
+                    <h1 class="title">📊 Admin Dashboard</h1>
+                    <p class="subtitle">Office Awards 2026 Results</p>
+                </div>
+                <div class="admin-controls">
+                    <button type="button" class="btn btn-toggle" id="toggleVotingBtn">
+                        <span class="toggle-icon">🔒</span>
+                        <span id="toggleBtnText">Close Voting</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="location.reload()">
+                        Refresh Results
+                    </button>
+                </div>
+            </header>
+
+            <!-- Voting Status -->
+            <div class="admin-status-card">
+                <div class="status-indicator">
+                    <span class="status-dot" id="adminStatusDot"></span>
+                    <span class="status-text" id="adminStatusText">Voting is Open</span>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="results-container" id="resultsContainer">
+                <!-- Results will be loaded here dynamically -->
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Office Awards 2026 Admin Panel</p>
+                <a href="/" class="back-link">← Back to Voting Page</a>
+            </footer>
+        </section>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast hidden" id="toast">
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

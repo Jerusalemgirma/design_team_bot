@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Awards 2026 - Vote Now!</title>
+    <meta name="description" content="Vote for your colleagues in the Office Awards 2026">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🏆 Office Awards 2026</h1>
+                <p class="subtitle">Celebrate your amazing colleagues!</p>
+                <div class="status-badge" id="votingStatus">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Voting Open</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Voter Info Form -->
+        <section class="voter-info-section" id="voterInfoSection">
+            <div class="card voter-info-card">
+                <h2>👋 Let's Get Started</h2>
+                <p class="card-subtitle">Please enter your details to vote</p>
+                <form id="voterInfoForm">
+                    <div class="form-group">
+                        <label for="voterName">Your Name</label>
+                        <input 
+                            type="text" 
+                            id="voterName" 
+                            name="voterName" 
+                            placeholder="John Doe" 
+                            required
+                            autocomplete="name"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="voterEmail">Your Email</label>
+                        <input 
+                            type="email" 
+                            id="voterEmail" 
+                            name="voterEmail" 
+                            placeholder="john@company.com" 
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Continue to Voting
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Voting Section -->
+        <section class="voting-section hidden" id="votingSection">
+            <div class="voting-header">
+                <h2>Cast Your Votes</h2>
+                <p class="voter-name-display">Voting as: <strong id="displayVoterName"></strong></p>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded here dynamically -->
+            </div>
+
+            <div class="submit-section">
+                <button type="button" class="btn btn-primary btn-large" id="submitVotesBtn">
+                    <span>Submit All Votes</span>
+                    <span class="btn-arrow">✓</span>
+                </button>
+                <p class="submit-note">You can vote for as many or as few categories as you like</p>
+            </div>
+        </section>
+
+        <!-- Success Message -->
+        <section class="success-section hidden" id="successSection">
+            <div class="card success-card">
+                <div class="success-icon">🎉</div>
+                <h2>Thank You for Voting!</h2>
+                <p>Your votes have been recorded successfully.</p>
+                <button type="button" class="btn btn-secondary" onclick="location.reload()">
+                    Vote Again (Different Email)
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Office Awards 2026 • Made with ❤️</p>
+            <a href="/admin.html" class="admin-link">Admin Panel</a>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast hidden" id="toast">
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
