@@ -129,7 +129,8 @@ async function initializeDatabase() {
       'Silent Hero Award',
       'Best Smile Award',
       'Coffee Lover Award',
-      'Team Spirit Award'
+      'Team Spirit Award',
+      'Best Sketcher Award'
     ];
 
     for (let i = 0; i < categories.length; i++) {
